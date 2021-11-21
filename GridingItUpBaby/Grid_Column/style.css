@@ -1,0 +1,73 @@
+.grid {
+  display: grid;
+  border: 2px blue solid;
+  height: 500px;
+  width: 500px;
+  grid-template: repeat(4, 1fr 2fr) / repeat(4, 3fr 2fr);
+  gap: 5px;
+}
+
+.a {
+  grid-row: 5 / 7;
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  grid-column: 1 / span 2;
+}
+
+.b {
+    grid-row: 2 / span 3;
+    grid-column: 2 / span 6;
+    
+}
+
+.box {
+  background-color: beige;
+  color: black;
+  border-radius: 5px;
+  border: 2px dodgerblue solid;
+}
+
+/* 
+
+GRID ESSENTIALS
+Grid Column
+The previous three properties also exist for columns. grid-column-start, grid-column-end and grid-column work identically to the row properties. These properties allow a grid item to span multiple columns.
+
+When using these properties, we can use the keyword span to start or end a column or row, relative to its other end. Look at how span is used in the code below:
+
+.item {
+  grid-column: 4 / span 2;
+}
+This is telling the item element to begin in column four and take up two columns of space. So item would occupy columns four and five. It produces the same result as the following code blocks:
+
+.item {
+  grid-column: 4 / 6;
+}
+.item {
+  grid-column-start: 4;
+  grid-column-end: span 2;
+}
+.item {
+  grid-column-start: span 2;
+  grid-column-end: 6;
+}
+span is a useful keyword, because it avoids off-by-one errors (miscalculating the ending grid line) you might make when determining the ending grid line of an element. If you know where you want your grid item to start and how long it should be, use span!
+
+Instructions
+1.
+Let’s add another item to our grid. In index.html, uncomment the B div on line 9.
+
+
+Stuck? Get a hint
+2.
+Let’s make box b take up a few rows. Use grid-row with span to make the item take up rows two through four.
+
+
+Stuck? Get a hint
+3.
+Next, make box b take up six columns. In style.css, in the .b ruleset, use grid-column to set its starting column to 2. Use span to make the item take up six columns.
+
+
+Stuck? Get a hint
+4.
+Now let’s go back to the box a ruleset. Refactor the grid-column-start and grid-column-end declarations into a shorthand grid-column declaration. The grid item should still start in the first column and span 2 columns using the span keyword. */
